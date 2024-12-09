@@ -4,8 +4,10 @@ import { Navigate } from "react-router-dom";
 import { AuthContext } from "@/App"; // App에서 제공하는 AuthContext 임포트
 
 const PrivateRoute = ({ children }) => {
-  const { user } = useContext(AuthContext); // 로그인된 사용자 정보 확인
-
+  const { user, isLoading } = useContext(AuthContext);
+  if (isLoading) {
+    return <div>Loading...</div>; // 로딩 중 표시
+  }
   if (!user) {
     // 사용자가 로그인하지 않았으면 로그인 페이지로 리다이렉트
     return <Navigate to="/login" />;

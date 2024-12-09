@@ -143,7 +143,7 @@ function App() {
 
   return (
     <div className="App">
-      <AuthContext.Provider value={{ user }}>
+      <AuthContext.Provider value={{ user, isLoading }}>
         <LoadingContext.Provider value={{ isLoading, setIsLoading }}>
           <DiaryStateContext.Provider value={data}>
             <DiaryDispatchContext.Provider value={{ onCreate, onUpdate, onDelete }}>
