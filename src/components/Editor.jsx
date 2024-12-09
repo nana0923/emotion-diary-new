@@ -11,7 +11,6 @@ const Editor = ({ onSubmit, onClickDelete, initData }) => {
   const location = useLocation();
 
   const isNewPage = location.pathname === "/new";
-  console.log(isNewPage);
 
   const [input, setInput] = useState({
     createdDate: new Date(),
