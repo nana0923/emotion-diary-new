@@ -42,12 +42,13 @@ export const AuthContext = createContext();
 
 function App() {
   const [user, setUser] = useState(null); // 로그인된 사용자 정보
-  const [isLoading, setIsLoading] = useState(true); // 로딩 상태 관리
+  const [isLoading, setIsLoading] = useState(false); // 로딩 상태 관리
   const [data, dispatch] = useReducer(reducer, []);
   const idRef = useRef(0);
 
   // Firebase 인증 상태 변화 감지
   useEffect(() => {
+    setIsLoading(true);
     onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
         setUser(currentUser); // 로그인한 사용자 정보

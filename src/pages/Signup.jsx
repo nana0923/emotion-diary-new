@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { LoadingContext } from "@/App";
 import { auth } from "@/firebase";
+
 import Header from "@layouts/Header";
 import SignupForm from "@components/SignupForm";
 import Container from "@layouts/Container";
@@ -9,9 +11,11 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Signup = () => {
+  const { isLoading, setIsLoading } = useContext(LoadingContext);
   const nav = useNavigate();
 
   const handleSignUp = async ({ email, password, displayName }) => {
+    setIsLoading(true);
     try {
       // 사용자 생성
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
@@ -42,6 +46,8 @@ const Signup = () => {
         default:
           toast.error("회원가입에 실패했습니다. 다시 시도해주세요.");
       }
+    } finally {
+      setIsLoading(false);
     }
   };
 
