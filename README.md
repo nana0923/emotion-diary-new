@@ -5,9 +5,12 @@
 
 한입으로 잘라먹는 리액트 최종 프로젝트 감정일기장에 기능을 추가하였습니다.
 
-1. firebase Authentication를 이용하여 로그인, 회원가입 기능 구현
-2. firebase Authentication와 firestore database를 이용하여 회원별 일기 관리(읽기,쓰기,수정)기능을 추가
-3. firebase 호스팅으로 수정
+## Upgrade 내역
+
+1. 로그인, 회원가입 페이지 레이아웃 추가
+2. firebase Authentication를 이용하여 로그인, 회원가입 기능 구현
+3. firebase Authentication와 firestore database를 이용하여 회원별 일기 관리(읽기,쓰기,수정)기능 추가
+4. firebase 호스팅으로 수정
 
 배포 사이트: https://emotion-diary-new.web.app/
 
