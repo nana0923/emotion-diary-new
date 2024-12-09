@@ -8,9 +8,11 @@
 ## Upgrade 내역
 
 1. 로그인, 회원가입 페이지 레이아웃 추가
-2. firebase Authentication를 이용하여 로그인, 회원가입 기능 구현
-3. firebase Authentication와 firestore database를 이용하여 회원별 일기 관리(읽기,쓰기,수정)기능 추가
-4. firebase 호스팅으로 수정
+2. header에 홈버튼, 메뉴버튼 추가
+3. 메뉴버튼 누를 시 현재 로그인 정보 (사용자이름, 이메일) 띄우고 로그아웃 버튼 및 기능 추가
+4. firebase Authentication를 이용하여 로그인, 회원가입, 로그아웃 기능 구현
+5. firebase Authentication와 firestore database를 이용하여 회원별 일기 관리(읽기,쓰기,수정)기능 추가
+6. firebase 호스팅으로 수정
 
 배포 사이트: https://emotion-diary-new.web.app/
 
