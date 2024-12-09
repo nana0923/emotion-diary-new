@@ -1,6 +1,5 @@
 import React from "react";
 import { createBrowserRouter } from "react-router-dom";
-import Header from "@layouts/Header"; // Header 컴포넌트
 
 import Home from "@pages/Home";
 import Login from "@pages/Login";
@@ -23,7 +22,7 @@ const router = createBrowserRouter([
           <PrivateRoute>
             <Home />
           </PrivateRoute>
-        ), // Home 페이지는 로그인 후 접근 가능
+        ),
       },
       { path: "login", element: <Login /> }, // 로그인 페이지
       { path: "signup", element: <SignUp /> }, // 회원가입 페이지
@@ -33,7 +32,7 @@ const router = createBrowserRouter([
           <PrivateRoute>
             <New />
           </PrivateRoute>
-        ), // 새로운 일기 작성 페이지는 로그인 후 접근 가능
+        ),
       },
       {
         path: "edit/:id",
@@ -41,7 +40,7 @@ const router = createBrowserRouter([
           <PrivateRoute>
             <Edit />
           </PrivateRoute>
-        ), // 일기 수정 페이지는 로그인 후 접근 가능
+        ),
       },
       {
         path: "diary/:id",
@@ -49,7 +48,7 @@ const router = createBrowserRouter([
           <PrivateRoute>
             <Diary />
           </PrivateRoute>
-        ), // 일기 상세 페이지는 로그인 후 접근 가능
+        ),
       },
       { path: "*", element: <Notfound /> }, // 잘못된 경로에 대한 404 페이지
     ],

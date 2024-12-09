@@ -1,7 +1,7 @@
 import { useState, createContext, useReducer, useRef, useEffect } from "react";
 import { RouterProvider } from "react-router-dom";
 import router from "@routes/router";
-import { onAuthStateChanged, onAuthStateChangedListener, auth, db } from "@/firebase";
+import { onAuthStateChanged, auth, db } from "@/firebase";
 import { collection, getDocs, addDoc, updateDoc, doc, deleteDoc } from "firebase/firestore";
 
 import { ToastContainer } from "react-toastify";

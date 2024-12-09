@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { AuthContext } from "@/App"; // AuthContext import
+import { AuthContext } from "@/App";
 import "@layouts/Header.css";
 
 import HomeIcon from "/src/assets/icon_home_B.svg";
@@ -10,7 +10,7 @@ import CloseIcon from "/src/assets/icon_close_B.svg";
 import LogoutButton from "../components/LogoutButton";
 
 const Header = ({ title, leftChild, rightChild }) => {
-  const { user } = useContext(AuthContext); // AuthContext 사용
+  const { user } = useContext(AuthContext);
   const [isOpen, setIsOpen] = useState(false);
 
   return (

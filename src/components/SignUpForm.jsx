@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Button from "@components/Button";
 import "@components/Form.css";
 
-const SignUpForm = ({ onSubmit }) => {
+const SignupForm = ({ onSubmit }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [displayName, setDisplayName] = useState("");
@@ -34,4 +34,4 @@ const SignUpForm = ({ onSubmit }) => {
   );
 };
 
-export default SignUpForm;
+export default SignupForm;

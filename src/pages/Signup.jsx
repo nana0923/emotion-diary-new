@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "@/firebase";
 import Header from "@layouts/Header";
-import SignUpForm from "@components/SignUpForm";
+import SignupForm from "@components/SignupForm";
 import Container from "@layouts/Container";
 import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css"; // toast 스타일 import
+import "react-toastify/dist/ReactToastify.css";
 
 const Signup = () => {
   const nav = useNavigate();
@@ -49,7 +49,7 @@ const Signup = () => {
     <div>
       <Header title={"회원가입"} />
       <Container>
-        <SignUpForm onSubmit={handleSignUp} />
+        <SignupForm onSubmit={handleSignUp} />
       </Container>
     </div>
   );
