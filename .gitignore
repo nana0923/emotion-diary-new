@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 
 .vercel
+src/firebase.js
+.firebase/*
+.firebase/hosting.ZGlzdA.cache
