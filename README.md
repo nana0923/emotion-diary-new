@@ -1,20 +1,23 @@
-# 감정 일기장 프로젝트 😊
+# 감정 일기장 프로젝트 Upgrade 😎
 
 감정 일기장 프로젝트입니다.
-오늘의 감정을 일기로 담아보세요.
+오늘의 감정을 골라보세요.
 
-한입으로 잘라먹는 리액트 최종 프로젝트 감정일기장에 기능을 추가하였습니다.
+한입으로 잘라먹는 리액트 최종 프로젝트 감정일기장에 기능을 추가하고 감정 디자인을 Upgrade하였습니다.
+
+![thumbnail.png](public\thumbnail.png)
 
 ## Upgrade 내역
 
-1. 로그인, 회원가입 페이지 레이아웃 추가
-2. header에 홈버튼, 메뉴버튼 추가
-3. 메뉴버튼 누를 시 현재 로그인 정보 (사용자이름, 이메일) 띄우고 로그아웃 버튼 및 기능 추가
-4. firebase Authentication를 이용하여 로그인, 회원가입, 로그아웃 기능 구현
-5. firebase Authentication와 firestore database를 이용하여 회원별 일기 관리(읽기,쓰기,수정)기능 추가
-6. firebase 호스팅으로 수정
+1. firebase Authentication를 이용하여 로그인, 회원가입, 로그아웃 기능 구현
+2. Loading (Spinner) 추가, Loading,User 상태를 Context API로 관리
+3. Firebase로 회원별 CRUD구현하기
+4. 기존에 5개로 표현하던 감정을 9개의 다양한 감정으로 바꿔서 디자인 Upgrade
+5. firebase 호스팅 하고 배포
 
-배포 사이트: https://emotion-diary-new.web.app/
+### 자세한 Upgrade 과정 설명은 [velog](https://velog.io/@nah0923/series/%EA%B0%90%EC%A0%95%EC%9D%BC%EA%B8%B0%EC%9E%A5Upgrade)에 적어놨습니다.
+
+### 배포 사이트: https://emotion-diary-new.web.app/
 
 ## 스택 & 라이브러리 선정
 
