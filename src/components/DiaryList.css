@@ -1,5 +1,5 @@
 .DiaryList .menu_bar {
-  margin: 20px 0px;
+  margin-bottom: 20px;
   display: flex;
   gap: 10px;
 }
