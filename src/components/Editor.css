@@ -26,10 +26,12 @@ textarea {
 
 .Editor > .emotion_section > .emotion_list_wrapper {
   display: flex;
-  justify-content: space-around;
-  gap: 2%;
+  justify-content: center;
+  height: 270px;
+  column-gap: 10px;
+  row-gap: 9%;
+  flex-wrap: wrap;
 }
-
 .Editor .button_section {
   display: flex;
   justify-content: space-between;

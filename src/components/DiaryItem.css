@@ -21,19 +21,31 @@
 }
 
 .DiaryItem .img_section_1 {
-  background-color: rgb(100, 201, 100);
+  background-color: #ffe85680;
 }
 .DiaryItem .img_section_2 {
-  background-color: rgb(157, 215, 114);
+  background-color: #ffbec280;
 }
 .DiaryItem .img_section_3 {
-  background-color: rgb(253, 206, 23);
+  background-color: #ffbb7c80;
 }
 .DiaryItem .img_section_4 {
-  background-color: rgb(253, 132, 70);
+  background-color: #9e9e9e80;
 }
 .DiaryItem .img_section_5 {
-  background-color: rgb(253, 86, 95);
+  background-color: #68b7f280;
+}
+.DiaryItem .img_section_6 {
+  background-color: #ff638a80;
+}
+.DiaryItem .img_section_7 {
+  background-color: #cdaff480;
+}
+.DiaryItem .img_section_8 {
+  background-color: #bfc1c380;
+}
+.DiaryItem .img_section_9 {
+  background-color: #8ed9b380;
 }
 
 .DiaryItem .info_section {
