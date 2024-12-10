@@ -41,44 +41,24 @@ export const LoadingContext = createContext();
 export const AuthContext = createContext();
 
 function App() {
-  const [user, setUser] = useState(null); // 로그인된 사용자 정보
+  const [user, setUser] = useState(undefined); // 로그인된 사용자 정보
   const [isLoading, setIsLoading] = useState(false); // 로딩 상태 관리
   const [data, dispatch] = useReducer(reducer, []);
-  const idRef = useRef(0);
 
   // Firebase 인증 상태 변화 감지
   useEffect(() => {
-    setIsLoading(true);
-    onAuthStateChanged(auth, (currentUser) => {
+    setIsLoading(true); // 초기 로딩 상태 활성화
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
-        setUser(currentUser); // 로그인한 사용자 정보
-        fetchDiaries(currentUser.uid); // 로그인하면 Firestore에서 일기 가져오기
+        setUser(currentUser);
+        fetchDiaries(currentUser.uid);
       } else {
-        setUser(null); // 로그아웃 상태
+        setUser(null);
       }
-      setIsLoading(false);
-    });
-  }, []);
-
-  useEffect(() => {
-    const storedData = localStorage.getItem("Diary");
-    if (!storedData) {
-      return;
-    }
-    const parsedData = JSON.parse(storedData);
-
-    let maxId = 0;
-    parsedData.forEach((item) => {
-      if (Number(item.id) > maxId) {
-        maxId = Number(item.id);
-      }
+      setIsLoading(false); // 인증 상태 확인 후 로딩 종료
     });
 
-    idRef.current = maxId + 1;
-    dispatch({
-      type: "INIT",
-      data: parsedData,
-    });
+    return () => unsubscribe(); // 컴포넌트 언마운트 시 Firebase 상태 리스너 정리
   }, []);
 
   // Firestore에서 일기 데이터 가져오기
@@ -144,7 +124,7 @@ function App() {
 
   return (
     <div className="App">
-      <AuthContext.Provider value={{ user, isLoading }}>
+      <AuthContext.Provider value={{ user }}>
         <LoadingContext.Provider value={{ isLoading, setIsLoading }}>
           <DiaryStateContext.Provider value={data}>
             <DiaryDispatchContext.Provider value={{ onCreate, onUpdate, onDelete }}>
