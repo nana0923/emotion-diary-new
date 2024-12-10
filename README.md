@@ -5,7 +5,7 @@
 
 한입으로 잘라먹는 리액트 최종 프로젝트 감정일기장에 기능을 추가하고 감정 디자인을 Upgrade하였습니다.
 
-![thumbnail.png](public\thumbnail.png)
+![thumbnail.png](thumbnail.png)
 
 ## Upgrade 내역
 
