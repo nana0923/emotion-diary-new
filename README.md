@@ -7,7 +7,7 @@
 
 ![thumbnail.png](thumbnail.png)
 
-## Upgrade 내역
+## 🚀 Upgrade 내역
 
 1. firebase Authentication를 이용하여 로그인, 회원가입, 로그아웃 기능 구현
 2. Loading (Spinner) 추가, Loading,User 상태를 Context API로 관리
