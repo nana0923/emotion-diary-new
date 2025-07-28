@@ -5,7 +5,7 @@ import { LoadingContext } from "@/App";
 import { auth } from "@/firebase";
 
 import Header from "@layouts/Header";
-import SignupForm from "../components/SignupForm";
+import SignupForm from "../components/SignupForm.jsx";
 import Container from "@layouts/Container";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
