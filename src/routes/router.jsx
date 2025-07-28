@@ -3,7 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 
 import Home from "@pages/Home";
 import Login from "@pages/Login";
-import SignUp from "@pages/SignUp";
+import SignUp from "@pages/Signup";
 import Notfound from "@pages/Notfound";
 import PrivateRoute from "@components/PrivateRoute"; // PrivateRoute 컴포넌트
 
