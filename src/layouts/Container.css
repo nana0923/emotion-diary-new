@@ -4,7 +4,7 @@
   width: auto;
   height: 100%;
   padding: 20px;
-  margin: 0;
+  margin: 0 !important;
 }
 
 .Container h4 {
